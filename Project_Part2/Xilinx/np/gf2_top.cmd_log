@@ -1,0 +1,34 @@
+xst -intstyle ise -ifn "C:/Users/B200875/Desktop/New/np/gf2_top.xst" -ofn "C:/Users/B200875/Desktop/New/np/gf2_top.syr" 
+xst -intstyle ise -ifn "C:/Users/B200875/Desktop/New/np/gf2_top.xst" -ofn "C:/Users/B200875/Desktop/New/np/gf2_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc D:/B200875/mp/spartan6_trinomial_dump.ucf -p xc6slx45-csg324-3 gf2_top.ngc gf2_top.ngd  
+xst -intstyle ise -ifn "C:/Users/B200875/Desktop/New/np/gf2_top.xst" -ofn "C:/Users/B200875/Desktop/New/np/gf2_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc D:/B200875/mp/spartan6_trinomial_dump.ucf -p xc6slx45-csg324-3 gf2_top.ngc gf2_top.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o gf2_top_map.ncd gf2_top.ngd gf2_top.pcf 
+par -w -intstyle ise -ol high -mt off gf2_top_map.ncd gf2_top.ncd gf2_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml gf2_top.twx gf2_top.ncd -o gf2_top.twr gf2_top.pcf 
+bitgen -intstyle ise -f gf2_top.ut gf2_top.ncd 
+bitgen -intstyle ise -f gf2_top.ut gf2_top.ncd 
+xst -intstyle ise -ifn "C:/Users/B200875/Desktop/New/np/gf2_top.xst" -ofn "C:/Users/B200875/Desktop/New/np/gf2_top.syr" 
+xst -intstyle ise -ifn "C:/Users/B200875/Desktop/New/np/gf2_top.xst" -ofn "C:/Users/B200875/Desktop/New/np/gf2_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc D:/B200875/mp/spartan6_trinomial_dump.ucf -p xc6slx45-csg324-3 gf2_top.ngc gf2_top.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o gf2_top_map.ncd gf2_top.ngd gf2_top.pcf 
+par -w -intstyle ise -ol high -mt off gf2_top_map.ncd gf2_top.ncd gf2_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml gf2_top.twx gf2_top.ncd -o gf2_top.twr gf2_top.pcf 
+bitgen -intstyle ise -f gf2_top.ut gf2_top.ncd 
+xst -intstyle ise -ifn "C:/Users/RGUKT/Desktop/New/np/gf2_top.xst" -ofn "C:/Users/RGUKT/Desktop/New/np/gf2_top.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim gf2_top.ngc gf2_top_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan.ucf -p xc6slx45-csg324-3 gf2_top.ngc gf2_top.ngd  
+xst -intstyle ise -ifn "C:/Users/RGUKT/Desktop/New/np/gf2_top.xst" -ofn "C:/Users/RGUKT/Desktop/New/np/gf2_top.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim gf2_top.ngc gf2_top_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan.ucf -p xc6slx45-csg324-3 gf2_top.ngc gf2_top.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o gf2_top_map.ncd gf2_top.ngd gf2_top.pcf 
+par -w -intstyle ise -ol high -mt off gf2_top_map.ncd gf2_top.ncd gf2_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml gf2_top.twx gf2_top.ncd -o gf2_top.twr gf2_top.pcf -ucf spartan.ucf 
+bitgen -intstyle ise -f gf2_top.ut gf2_top.ncd 
+xst -intstyle ise -ifn "C:/Users/RGUKT/Desktop/New/np/gf2_top.xst" -ofn "C:/Users/RGUKT/Desktop/New/np/gf2_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spartan.ucf -p xc6slx45-csg324-3 gf2_top.ngc gf2_top.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o gf2_top_map.ncd gf2_top.ngd gf2_top.pcf 
+par -w -intstyle ise -ol high -mt off gf2_top_map.ncd gf2_top.ncd gf2_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml gf2_top.twx gf2_top.ncd -o gf2_top.twr gf2_top.pcf -ucf spartan.ucf 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim gf2_top.ngc gf2_top_synthesis.v 
+bitgen -intstyle ise -f gf2_top.ut gf2_top.ncd 

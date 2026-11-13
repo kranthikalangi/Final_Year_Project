@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/ACER/Desktop/Major Project/major/polynomial_multiplier.xst" -ofn "C:/Users/ACER/Desktop/Major Project/major/polynomial_multiplier.syr" 

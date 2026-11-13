@@ -1,0 +1,200 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part1
+vbaud_gen
+Z0 !s110 1793892764
+!i10b 1
+!s100 AU]]j0B8Sjn@;gQTEYhch3
+IbLfYC4]c4RNh:<leWGCVh3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part2/Modelslim
+Z3 w1793892572
+Z4 8C:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part2/Modelslim/iot_gf2_top.v
+Z5 FC:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part2/Modelslim/iot_gf2_top.v
+L0 234
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1793892764.000000
+Z8 !s107 C:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part2/Modelslim/iot_gf2_top.v|
+Z9 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part2/Modelslim/iot_gf2_top.v|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vgf2_top
+R0
+!i10b 1
+!s100 JWkVdz1^[K6<=CP]VgYmR2
+IAz7_FdO94GBAXe_ggQ@Cj3
+R1
+R2
+Z12 w1793892648
+Z13 8C:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part2/Modelslim/gf2_top.v
+Z14 FC:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part2/Modelslim/gf2_top.v
+L0 21
+R6
+r1
+!s85 0
+31
+R7
+Z15 !s107 C:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part2/Modelslim/gf2_top.v|
+Z16 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part2/Modelslim/gf2_top.v|
+!i113 1
+R10
+R11
+vGF_mod2
+R0
+!i10b 1
+!s100 c=];7UNnleTJL@C7FdC1M1
+I7SM]A>Foj9k_L3>g_SikI2
+R1
+R2
+R12
+R13
+R14
+L0 91
+R6
+r1
+!s85 0
+31
+R7
+R15
+R16
+!i113 1
+R10
+R11
+n@g@f_mod2
+viot_gf2_top
+R0
+!i10b 1
+!s100 UZB0hV3e4Zf5M65VUneSW2
+I6@fi4F`jP1VLRnn^QnnE;3
+R1
+R2
+R3
+R4
+R5
+L0 3
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vpolynomial_multiplier
+R0
+!i10b 1
+!s100 ;Q5`<;bKSiFNzWW:3NhR?2
+I=6Fzj]oVF7YZgl49[B>PH0
+R1
+R2
+R12
+R13
+R14
+L0 126
+R6
+r1
+!s85 0
+31
+R7
+R15
+R16
+!i113 1
+R10
+R11
+vtb_gf2_top
+!s110 1793892765
+!i10b 1
+!s100 MUjiOg<DQ5:81h`2i@^8J1
+IC1B^1`8b>6Bk4SgOhU=320
+R1
+R2
+w1793892742
+8C:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part2/Modelslim/tb_gf2_top.v
+FC:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part2/Modelslim/tb_gf2_top.v
+L0 25
+R6
+r1
+!s85 0
+31
+!s108 1793892765.000000
+!s107 C:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part2/Modelslim/tb_gf2_top.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part2/Modelslim/tb_gf2_top.v|
+!i113 1
+R10
+R11
+vtrinomial_reducer
+R0
+!i10b 1
+!s100 RDUVHA@2j_z3M]Fhj2W_Y3
+I=FND89]A;bNT3l=YGZHSe2
+R1
+R2
+R12
+R13
+R14
+L0 151
+R6
+r1
+!s85 0
+31
+R7
+R15
+R16
+!i113 1
+R10
+R11
+vuart_rx
+R0
+!i10b 1
+!s100 jMM8f:TJnF8C74i7Rb]e03
+I`0F@=SZEKE13dF?=75elE0
+R1
+R2
+R3
+R4
+R5
+L0 185
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vuart_tx
+R0
+!i10b 1
+!s100 f8R4nUb:dBUNVQmX<08YZ1
+I=oZhTA?5Q`Q7[M=IM<zDk3
+R1
+R2
+R3
+R4
+R5
+L0 138
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11

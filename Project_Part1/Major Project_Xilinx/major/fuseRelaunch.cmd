@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/B200875/Desktop/Major Project/major/GF_mod2_tb_isim_beh.exe" -prj "C:/Users/B200875/Desktop/Major Project/major/GF_mod2_tb_beh.prj" "work.GF_mod2_tb" "work.glbl" 

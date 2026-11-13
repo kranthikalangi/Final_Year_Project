@@ -1,0 +1,18 @@
+xst -intstyle ise -ifn "C:/Users/ACER/Desktop/Major Project/major/GF_mod2.xst" -ofn "C:/Users/ACER/Desktop/Major Project/major/GF_mod2.syr" 
+xst -intstyle ise -ifn "C:/Users/ACER/Desktop/Major Project/major/GF_mod2.xst" -ofn "C:/Users/ACER/Desktop/Major Project/major/GF_mod2.syr" 
+xst -intstyle ise -ifn "C:/Users/ACER/Desktop/Major Project/major/GF_mod2.xst" -ofn "C:/Users/ACER/Desktop/Major Project/major/GF_mod2.syr" 
+xst -intstyle ise -ifn "C:/Users/ACER/Desktop/Major Project/major/GF_mod2.xst" -ofn "C:/Users/ACER/Desktop/Major Project/major/GF_mod2.syr" 
+xst -intstyle ise -ifn "C:/Users/ACER/Desktop/Major Project/major/GF_mod2.xst" -ofn "C:/Users/ACER/Desktop/Major Project/major/GF_mod2.syr" 
+xst -intstyle ise -ifn "C:/Users/ACER/Desktop/Major Project/major/GF_mod2.xst" -ofn "C:/Users/ACER/Desktop/Major Project/major/GF_mod2.syr" 
+xst -intstyle ise -ifn "C:/Users/ACER/Desktop/Major Project/major/GF_mod2.xst" -ofn "C:/Users/ACER/Desktop/Major Project/major/GF_mod2.syr" 
+xst -intstyle ise -ifn "C:/Users/ACER/Desktop/Major Project/major/GF_mod2.xst" -ofn "C:/Users/ACER/Desktop/Major Project/major/GF_mod2.syr" 
+xst -intstyle ise -ifn "C:/Users/ACER/Desktop/Major Project/major/GF_mod2.xst" -ofn "C:/Users/ACER/Desktop/Major Project/major/GF_mod2.syr" 
+xst -intstyle ise -ifn "C:/Users/B200875/Desktop/Major Project/major/GF_mod2.xst" -ofn "C:/Users/B200875/Desktop/Major Project/major/GF_mod2.syr" 
+xst -intstyle ise -ifn "C:/Users/B200875/Desktop/Major Project/major/GF_mod2.xst" -ofn "C:/Users/B200875/Desktop/Major Project/major/GF_mod2.syr" 
+xst -intstyle ise -ifn "C:/Users/B200875/Desktop/Major Project/major/GF_mod2.xst" -ofn "C:/Users/B200875/Desktop/Major Project/major/GF_mod2.syr" 
+xst -intstyle ise -ifn "C:/Users/B200875/Desktop/Major Project/major/GF_mod2.xst" -ofn "C:/Users/B200875/Desktop/Major Project/major/GF_mod2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 "GF_mod2.ngc" GF_mod2.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o GF_mod2_map.ncd GF_mod2.ngd GF_mod2.pcf 
+par -w -intstyle ise -ol high -mt off GF_mod2_map.ncd GF_mod2.ncd GF_mod2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml GF_mod2.twx GF_mod2.ncd -o GF_mod2.twr GF_mod2.pcf 
+xst -intstyle ise -ifn "C:/Users/B200875/Desktop/Major Project/major/GF_mod2.xst" -ofn "C:/Users/B200875/Desktop/Major Project/major/GF_mod2.syr" 

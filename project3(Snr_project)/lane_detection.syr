@@ -1,0 +1,360 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Reading design: lane_detection.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "lane_detection.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "lane_detection"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : lane_detection
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\ACER\Desktop\GATE\majorproject1\mp1.v" into library work
+Parsing module <lane_detection>.
+Parsing module <grayscale>.
+Parsing module <gaussian_blur>.
+Parsing module <sobel>.
+Parsing module <non_max_suppression>.
+Parsing module <hough_transform>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <lane_detection>.
+
+Elaborating module <grayscale>.
+
+Elaborating module <gaussian_blur>.
+WARNING:HDLCompiler:413 - "C:\Users\ACER\Desktop\GATE\majorproject1\mp1.v" Line 63: Result of 16-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:634 - "C:\Users\ACER\Desktop\GATE\majorproject1\mp1.v" Line 49: Net <window[24][7]> does not have a driver.
+
+Elaborating module <sobel>.
+WARNING:HDLCompiler:634 - "C:\Users\ACER\Desktop\GATE\majorproject1\mp1.v" Line 77: Net <window[0][7]> does not have a driver.
+WARNING:HDLCompiler:1127 - "C:\Users\ACER\Desktop\GATE\majorproject1\mp1.v" Line 17: Assignment to grad_x ignored, since the identifier is never used
+
+Elaborating module <non_max_suppression>.
+WARNING:HDLCompiler:413 - "C:\Users\ACER\Desktop\GATE\majorproject1\mp1.v" Line 105: Result of 16-bit expression is truncated to fit in 8-bit target.
+
+Elaborating module <hough_transform>.
+WARNING:HDLCompiler:189 - "C:\Users\ACER\Desktop\GATE\majorproject1\mp1.v" Line 19: Size mismatch in connection of port <hough_space>. Formal port size is 32-bit while actual signal size is 8-bit.
+WARNING:HDLCompiler:634 - "C:\Users\ACER\Desktop\GATE\majorproject1\mp1.v" Line 11: Net <magnitude[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\ACER\Desktop\GATE\majorproject1\mp1.v" Line 12: Net <angle[15]> does not have a driver.
+WARNING:Xst:2972 - "C:\Users\ACER\Desktop\GATE\majorproject1\mp1.v" line 15. All outputs of instance <u1> of block <grayscale> are unconnected in block <lane_detection>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\ACER\Desktop\GATE\majorproject1\mp1.v" line 16. All outputs of instance <u2> of block <gaussian_blur> are unconnected in block <lane_detection>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\ACER\Desktop\GATE\majorproject1\mp1.v" line 17. All outputs of instance <u3> of block <sobel> are unconnected in block <lane_detection>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <lane_detection>.
+    Related source file is "C:\Users\ACER\Desktop\GATE\majorproject1\mp1.v".
+INFO:Xst:3210 - "C:\Users\ACER\Desktop\GATE\majorproject1\mp1.v" line 17: Output port <grad_x> of the instance <u3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\ACER\Desktop\GATE\majorproject1\mp1.v" line 17: Output port <grad_y> of the instance <u3> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <magnitude> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <angle> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <lane_detection> synthesized.
+
+Synthesizing Unit <div_16u_5u>.
+    Related source file is "".
+    Summary:
+	no macro.
+Unit <div_16u_5u> synthesized.
+
+Synthesizing Unit <non_max_suppression>.
+    Related source file is "C:\Users\ACER\Desktop\GATE\majorproject1\mp1.v".
+WARNING:Xst:647 - Input <magnitude<15:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <angle> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    WARNING:Xst:2404 -  FFs/Latches <suppressed<7:0>> (without init value) have a constant value of 0 in block <non_max_suppression>.
+    Summary:
+	no macro.
+Unit <non_max_suppression> synthesized.
+
+Synthesizing Unit <hough_transform>.
+    Related source file is "C:\Users\ACER\Desktop\GATE\majorproject1\mp1.v".
+    Found 32-bit register for signal <hough_space>.
+    Found 32-bit adder for signal <hough_space[31]_GND_10_o_add_0_OUT> created at line 123.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+Unit <hough_transform> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Registers                                            : 1
+ 32-bit register                                       : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <hough_transform>.
+The following registers are absorbed into accumulator <hough_space>: 1 register on signal <hough_space>.
+Unit <hough_transform> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Accumulators                                         : 1
+ 32-bit up accumulator                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <u5/hough_space_0> (without init value) has a constant value of 0 in block <lane_detection>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u5/hough_space_1> (without init value) has a constant value of 0 in block <lane_detection>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u5/hough_space_2> (without init value) has a constant value of 0 in block <lane_detection>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u5/hough_space_3> (without init value) has a constant value of 0 in block <lane_detection>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u5/hough_space_4> (without init value) has a constant value of 0 in block <lane_detection>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u5/hough_space_5> (without init value) has a constant value of 0 in block <lane_detection>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u5/hough_space_6> (without init value) has a constant value of 0 in block <lane_detection>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u5/hough_space_7> (without init value) has a constant value of 0 in block <lane_detection>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <u5/hough_space_8> of sequential type is unconnected in block <lane_detection>.
+WARNING:Xst:2677 - Node <u5/hough_space_9> of sequential type is unconnected in block <lane_detection>.
+WARNING:Xst:2677 - Node <u5/hough_space_10> of sequential type is unconnected in block <lane_detection>.
+WARNING:Xst:2677 - Node <u5/hough_space_11> of sequential type is unconnected in block <lane_detection>.
+WARNING:Xst:2677 - Node <u5/hough_space_12> of sequential type is unconnected in block <lane_detection>.
+WARNING:Xst:2677 - Node <u5/hough_space_13> of sequential type is unconnected in block <lane_detection>.
+WARNING:Xst:2677 - Node <u5/hough_space_14> of sequential type is unconnected in block <lane_detection>.
+WARNING:Xst:2677 - Node <u5/hough_space_15> of sequential type is unconnected in block <lane_detection>.
+WARNING:Xst:2677 - Node <u5/hough_space_16> of sequential type is unconnected in block <lane_detection>.
+WARNING:Xst:2677 - Node <u5/hough_space_17> of sequential type is unconnected in block <lane_detection>.
+WARNING:Xst:2677 - Node <u5/hough_space_18> of sequential type is unconnected in block <lane_detection>.
+WARNING:Xst:2677 - Node <u5/hough_space_19> of sequential type is unconnected in block <lane_detection>.
+WARNING:Xst:2677 - Node <u5/hough_space_20> of sequential type is unconnected in block <lane_detection>.
+WARNING:Xst:2677 - Node <u5/hough_space_21> of sequential type is unconnected in block <lane_detection>.
+WARNING:Xst:2677 - Node <u5/hough_space_22> of sequential type is unconnected in block <lane_detection>.
+WARNING:Xst:2677 - Node <u5/hough_space_23> of sequential type is unconnected in block <lane_detection>.
+WARNING:Xst:2677 - Node <u5/hough_space_24> of sequential type is unconnected in block <lane_detection>.
+WARNING:Xst:2677 - Node <u5/hough_space_25> of sequential type is unconnected in block <lane_detection>.
+WARNING:Xst:2677 - Node <u5/hough_space_26> of sequential type is unconnected in block <lane_detection>.
+WARNING:Xst:2677 - Node <u5/hough_space_27> of sequential type is unconnected in block <lane_detection>.
+WARNING:Xst:2677 - Node <u5/hough_space_28> of sequential type is unconnected in block <lane_detection>.
+WARNING:Xst:2677 - Node <u5/hough_space_29> of sequential type is unconnected in block <lane_detection>.
+WARNING:Xst:2677 - Node <u5/hough_space_30> of sequential type is unconnected in block <lane_detection>.
+WARNING:Xst:2677 - Node <u5/hough_space_31> of sequential type is unconnected in block <lane_detection>.
+
+Optimizing unit <lane_detection> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block lane_detection, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : lane_detection.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1
+#      GND                         : 1
+# IO Buffers                       : 8
+#      OBUF                        : 8
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      0
+   Number with an unused Flip Flop:       0  out of      0         
+   Number with an unused LUT:             0  out of      0         
+   Number of fully used LUT-FF pairs:     0  out of      0         
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          34
+ Number of bonded IOBs:                   8  out of    210     3%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.27 secs
+ 
+--> 
+
+Total memory usage is 4617724 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   48 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

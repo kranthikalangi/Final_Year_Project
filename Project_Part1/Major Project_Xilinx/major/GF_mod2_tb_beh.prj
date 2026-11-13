@@ -1,0 +1,5 @@
+verilog work "trinomial_reducer.v"
+verilog work "polynomial_multiplier.v"
+verilog work "GF_mod2.v"
+verilog work "GF_mod2_tb.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

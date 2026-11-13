@@ -1,0 +1,29 @@
+Command line:
+   tb_GF_mod2_using_matrix_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  59334
+
+Fri Oct 24 23:08:03 2025
+
+
+ Elaboration Time: 0.078125 sec
+
+ Current Memory Usage: 5466.26 Meg
+
+ Total Signals          : 29
+ Total Nets             : 78
+ Total Signal Drivers   : 11
+ Total Blocks           : 7
+ Total Primitive Blocks : 5
+ Total Processes        : 16
+ Total Traceable Variables  : 45
+ Total Scalar Nets and Variables : 866
+Total Line Count : 75
+
+ Total Simulation Time: 0.09375 sec
+
+ Current Memory Usage: 4994.4 Meg
+
+Fri Oct 24 23:13:45 2025
+

@@ -1,0 +1,6 @@
+verilog work "poly_mul.v"
+verilog work "gf2m_reduce.v"
+verilog work "compute_r.v"
+verilog work "GF_mod2_using_matrix.v"
+verilog work "tb_GF_mod2_using_matrix.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

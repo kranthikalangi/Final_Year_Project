@@ -1,0 +1,28 @@
+Command line:
+   tb_gf2_top_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  59641
+
+Thu Mar 26 15:34:38 2026
+
+
+ Elaboration Time: 0.046875 sec
+
+ Current Memory Usage: 847.065 Meg
+
+ Total Signals          : 32
+ Total Nets             : 95
+ Total Signal Drivers   : 18
+ Total Blocks           : 6
+ Total Primitive Blocks : 3
+ Total Processes        : 24
+ Total Traceable Variables  : 41
+ Total Scalar Nets and Variables : 645
+
+ Total Simulation Time: 0.046875 sec
+
+ Current Memory Usage: 375.206 Meg
+
+Thu Mar 26 16:14:50 2026
+

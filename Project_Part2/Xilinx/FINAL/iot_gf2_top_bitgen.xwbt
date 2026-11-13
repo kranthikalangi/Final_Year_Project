@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\RGUKT\Desktop\kranthi\p2\iot_gf2_top.ncd
+OUTFILE=C:\Users\RGUKT\Desktop\kranthi\p2\iot_gf2_top.bit
+FAMILY=Spartan6
+PART=xc6slx45-3csg324
+WORKINGDIR=C:\Users\RGUKT\Desktop\kranthi\p2
+LICENSE=WebPack
+USER_INFO=__0_0_0

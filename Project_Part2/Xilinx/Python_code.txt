@@ -1,0 +1,84 @@
+import serial
+import time
+import random
+
+# --- GF(2) Configuration ---
+# Parameters based on Verilog: M=6, T=4 (Trinomial: x^6 + x^4 + 1)
+M = 6
+T = 4
+B_FIXED = 16  # Fixed value for multiplication
+SERIAL_PORT = 'COM3'  # Update this to your actual COM port
+BAUD_RATE = 115200
+
+def gf2_multiply(a, b):
+    """
+    Performs polynomial multiplication in GF(2).
+    This is 'carry-less' multiplication.
+    """
+    result = 0
+    for i in range(M):
+        if (a >> i) & 1:
+            result ^= (b << i)
+    return result
+
+def gf2_reduce(product):
+    """
+    Reduces the product using the trinomial x^6 + x^4 + 1.
+    Bitwise implementation of the Verilog reduction logic.
+    """
+    res = product
+    # Iterate from the highest possible bit (2M-2) down to M
+    for i in range(2 * M - 2, M - 1, -1):
+        if (res >> i) & 1:
+            # XOR with the reduction polynomial terms (x^T and x^0)
+            res ^= (1 << (i - M + T))
+            res ^= (1 << (i - M))
+            # Clear the bit that was just reduced
+            res &= ~(1 << i)
+    return res & 0x3F  # Mask to return only M bits (6 bits)
+
+# --- Main Execution ---
+try:
+    # Initialize Serial Connection
+    ser = serial.Serial(SERIAL_PORT, BAUD_RATE, timeout=1)
+    time.sleep(2)  # Wait for hardware reset/stabilization
+    
+    print(f"--- GF(2) Hardware Data Provider ---")
+    print(f"Port: {SERIAL_PORT} | Fixed B: {B_FIXED}")
+    print(f"Sending: [Byte 0: Value A] [Byte 1: Expected Result]")
+    print("-" * 50)
+
+    while True:
+        # 1. Generate random A (6-bit range: 0-63)
+        a_val = random.randint(0, 63)
+        
+        # 2. Calculate the local GF(2) result for verification
+        raw_prod = gf2_multiply(a_val, B_FIXED)
+        expected_result = gf2_reduce(raw_prod)
+
+        # 3. Transmit both A and the Result as a 2-byte packet
+        # Byte 0 = a_val
+        # Byte 1 = expected_result
+        payload = bytes([a_val, expected_result])
+        ser.write(payload)
+
+        # 4. Console Feedback
+        bin_a = bin(a_val)[2:].zfill(M)
+        bin_res = bin(expected_result)[2:].zfill(M)
+        
+        print(f"Sent A: {a_val:2} ({bin_a}) | Sent Result: {expected_result:2} ({bin_res})")
+        
+        # Delay between transmissions for board observation
+        time.sleep(2)
+
+except serial.SerialException:
+    print(f"Error: Could not open {SERIAL_PORT}. Check your connection.")
+except KeyboardInterrupt:
+    print("\nCommunication stopped by user.")
+finally:
+    if 'ser' in locals() and ser.is_open:
+        ser.close()
+        print("Serial port closed.")
+
+
+

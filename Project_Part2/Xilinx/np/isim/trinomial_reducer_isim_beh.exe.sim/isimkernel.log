@@ -1,0 +1,28 @@
+Command line:
+   trinomial_reducer_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  52243
+
+Thu Mar 26 14:55:56 2026
+
+
+ Elaboration Time: 0.0625 sec
+
+ Current Memory Usage: 847.032 Meg
+
+ Total Signals          : 14
+ Total Nets             : 23
+ Total Signal Drivers   : 6
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 8
+ Total Traceable Variables  : 24
+ Total Scalar Nets and Variables : 210
+
+ Total Simulation Time: 0.0625 sec
+
+ Current Memory Usage: 847.032 Meg
+
+Thu Mar 26 14:56:07 2026
+

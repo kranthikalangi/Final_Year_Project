@@ -1,0 +1,8 @@
+Release 14.5 Drc P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Wed Dec 31 15:21:21 2025
+
+drc -z gf2_top.ncd gf2_top.pcf
+
+DRC detected 0 errors and 0 warnings.

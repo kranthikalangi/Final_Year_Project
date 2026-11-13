@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/B200875/Desktop/Major Project/gf2/gf2m_reduce.xst" -ofn "C:/Users/B200875/Desktop/Major Project/gf2/gf2m_reduce.syr" 
+xst -intstyle ise -ifn "C:/Users/B200875/Desktop/Major Project/gf2/gf2m_reduce.xst" -ofn "C:/Users/B200875/Desktop/Major Project/gf2/gf2m_reduce.syr" 

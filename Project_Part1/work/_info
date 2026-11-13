@@ -1,0 +1,203 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/Verilog_labs/Test/synth
+vcompute_r
+Z0 !s110 1793886652
+!i10b 1
+!s100 hNG9KfUD:<i]NI_HYPG@X3
+IQS[5<72jd2h:HP3mOakof1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part1
+Z3 w1793188079
+Z4 8C:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part1/GF_mod2_using_matrix.v
+Z5 FC:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part1/GF_mod2_using_matrix.v
+L0 66
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1793886652.000000
+Z8 !s107 C:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part1/GF_mod2_using_matrix.v|
+Z9 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part1/GF_mod2_using_matrix.v|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vgf2m_reduce
+R0
+!i10b 1
+!s100 BTOEF<mg;6>e^6oFDV>7?2
+I?KOOQ@EETH8[U`[bQSO8[3
+R1
+R2
+R3
+R4
+R5
+L0 107
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vGF_mod2_using_matrix
+R0
+!i10b 1
+!s100 SH4o7Y^7zP=cdlWT5DdP42
+IWd8GDcP_hI2HgdUS_6PUE1
+R1
+R2
+R3
+R4
+R5
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@g@f_mod2_using_matrix
+vGF_mod2_using_shift_reduction
+R0
+!i10b 1
+!s100 gVX6Q2B=E<V5Vf24<j^0@2
+I9j]?BdWU6??@DKzzBeIRf2
+R1
+R2
+Z12 w1793886454
+Z13 8C:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part1/GF_mod2_using_shift_reduction.v
+Z14 FC:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part1/GF_mod2_using_shift_reduction.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+Z15 !s107 C:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part1/GF_mod2_using_shift_reduction.v|
+Z16 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part1/GF_mod2_using_shift_reduction.v|
+!i113 1
+R10
+R11
+n@g@f_mod2_using_shift_reduction
+vpolynomial_multiplier
+R0
+!i10b 1
+!s100 WXeH@_?g=D`FN9L_d8hjl3
+IadL9@mQQL4d[`IPjmgNcT2
+R1
+R2
+R12
+R13
+R14
+L0 29
+R6
+r1
+!s85 0
+31
+R7
+R15
+R16
+!i113 1
+R10
+R11
+vpolynomial_multiplier1
+R0
+!i10b 1
+!s100 `_AL?zLJg0MfQ7iEKmOXa2
+IHE`zDIDWiC`d6n?]GW`A62
+R1
+R2
+R3
+R4
+R5
+L0 45
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vtb_GF_mod2_using_matrix
+R0
+!i10b 1
+!s100 MlVL]WEdPomJN2nNdFgfO0
+IFd@S7j>JVODmUZk;P[eM<3
+R1
+R2
+w1793188792
+8C:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part1/tb_GF_mod2_using_matrix.v
+FC:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part1/tb_GF_mod2_using_matrix.v
+Z17 L0 24
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part1/tb_GF_mod2_using_matrix.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part1/tb_GF_mod2_using_matrix.v|
+!i113 1
+R10
+R11
+ntb_@g@f_mod2_using_matrix
+vtb_GF_mod2_using_shift_reduction
+R0
+!i10b 1
+!s100 H^XR<B10?<92_HVh^2];N3
+IzFTN6iZRdG9z4Y@3WPRZl0
+R1
+R2
+w1793189518
+8C:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part1/tb_GF_mod2_using_shift_reduction.v
+FC:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part1/tb_GF_mod2_using_shift_reduction.v
+R17
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part1/tb_GF_mod2_using_shift_reduction.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/KRANTHI KUMAR/Documents/Final_Year_Project/Project_Part1/tb_GF_mod2_using_shift_reduction.v|
+!i113 1
+R10
+R11
+ntb_@g@f_mod2_using_shift_reduction
+vtrinomial_reducer
+R0
+!i10b 1
+!s100 OfC9]BOLk8<M1BP`N3[Kf0
+IEi>zzeXNj4?@cIgo[785[2
+R1
+R2
+R12
+R13
+R14
+L0 48
+R6
+r1
+!s85 0
+31
+R7
+R15
+R16
+!i113 1
+R10
+R11

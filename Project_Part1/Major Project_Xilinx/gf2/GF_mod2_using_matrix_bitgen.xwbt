@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\B200875\Desktop\Major Project\gf2\GF_mod2_using_matrix.ncd
+OUTFILE=C:\Users\B200875\Desktop\Major Project\gf2\GF_mod2_using_matrix.bit
+FAMILY=Spartan6
+PART=xc6slx45-2csg324
+WORKINGDIR=C:\Users\B200875\Desktop\Major Project\gf2
+LICENSE=WebPack
+USER_INFO=213018335_0_0_574

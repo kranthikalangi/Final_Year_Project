@@ -1,0 +1,4 @@
+verilog work "poly_mul.v"
+verilog work "gf2m_reduce.v"
+verilog work "compute_r.v"
+verilog work "GF_mod2_using_matrix.v"

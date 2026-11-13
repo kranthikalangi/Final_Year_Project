@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/RGUKT/Desktop/kranthi/np/tb_gf2_top_isim_beh.exe" -prj "C:/Users/RGUKT/Desktop/kranthi/np/tb_gf2_top_beh.prj" "work.tb_gf2_top" "work.glbl" 

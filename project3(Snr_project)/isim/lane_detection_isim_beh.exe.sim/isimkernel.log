@@ -1,0 +1,28 @@
+Command line:
+   lane_detection_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  55883
+
+Mon Jan 06 13:04:58 2025
+
+
+ Elaboration Time: 0.046875 sec
+
+ Current Memory Usage: 5154.93 Meg
+
+ Total Signals          : 42
+ Total Nets             : 159
+ Total Signal Drivers   : 11
+ Total Blocks           : 7
+ Total Primitive Blocks : 6
+ Total Processes        : 17
+ Total Traceable Variables  : 29
+ Total Scalar Nets and Variables : 679
+
+ Total Simulation Time: 0.046875 sec
+
+ Current Memory Usage: 5154.93 Meg
+
+Mon Jan 06 13:05:05 2025
+

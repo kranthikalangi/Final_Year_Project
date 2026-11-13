@@ -1,0 +1,138 @@
+module GF_mod2_using_matrix  #( parameter  M =6, parameter  T=4)(
+
+    	input  [M-1:0] A,
+    	input  [M-1:0] B,
+	output [2*M-2:0] d,                    
+    	output [M-1:0] c
+    	);
+
+	wire [M-1:0] f;                     
+    	wire  [M*(M-1)-1:0] Rflat; 
+
+	 polynomial_multiplier1 #(.M(M), .T(T))  MUX (
+        .A(A),
+        .B(B),
+        .d(d)
+    	);
+	 
+	 assign f = make_trinomial(M, T);
+	 
+	function [M-1:0] make_trinomial;
+        	input integer m;
+        	input integer t;
+        	integer i;
+        	begin
+            		make_trinomial = {M{1'b0}};  // initialize
+            		make_trinomial[0] = 1'b1;    // constant term
+            		if (t >= 1 && t < m)
+                		make_trinomial[t] = 1'b1; // x^T term
+        	end
+    	endfunction
+
+    	compute_r #(.M(M), .T(T)) COM_r (f, Rflat); 
+
+    	gf2m_reduce #(.M(M), .T(T)) OUT (
+	.d(d),          
+        .Rflat(Rflat),  
+        .c(c) 
+	 );
+	
+endmodule
+
+
+
+
+module polynomial_multiplier1 #( parameter  M =6, parameter  T=4)(
+    input  [M-1:0] A,
+    input  [M-1:0] B,
+    output [2*M-2:0] d
+);
+    reg [2*M-2:0] prod;
+    integer i, j;
+    always @* begin
+        prod = 0;
+        for (i = 0; i < M; i = i + 1) begin
+            for (j = 0; j < M; j = j + 1) begin
+                prod[i+j] = prod[i+j] ^ (A[i] & B[j]);
+            end
+        end
+    end
+    assign d = prod;
+endmodule
+
+
+
+
+module compute_r  #(    parameter  M =6, parameter  T=4)(
+    input  wire [M-1:0] f,                     
+    output reg  [M*(M-1)-1:0] Rflat             // flattened r matrix
+);
+
+    
+    reg [M-1:0] r_col [0:M-2];  // r_col[i][j] == r_j^i
+
+    integer i, j;
+    always @* begin
+        // column 0 is just f (r_j^0 = f_j)
+        r_col[0] = f;
+
+        // compute columns 1 .. M-2 using recurrence
+        // r_j^i = r_{j-1}^{i-1} ^ ( r_{m-1}^{i-1} & r_j^0 )
+        for (i = 1; i <= M-2; i = i + 1) begin
+            // default initialize column
+            r_col[i] = {M{1'b0}};
+            for (j = 0; j < M; j = j + 1) begin
+                // term1 = r_{j-1}^{i-1}  (0 when j==0)
+                if (j == 0)
+                    r_col[i][j] = (r_col[i-1][M-1] & r_col[0][j]); // 0 ^ (r_{m-1}^{i-1} & r_j^0) -> just second term
+                else
+                    r_col[i][j] = r_col[i-1][j-1] ^ (r_col[i-1][M-1] & r_col[0][j]);
+            end
+        end
+
+        // flatten into Rflat: Rflat[i*M + j] = r_col[i][j]
+        // i = 0 .. M-2, j = 0 .. M-1
+        Rflat = {(M*(M-1)){1'b0}};
+        for (i = 0; i <= M-2; i = i + 1) begin
+            for (j = 0; j < M; j = j + 1) begin
+                Rflat[i*M + j] = r_col[i][j];
+            end
+        end
+    end
+
+endmodule
+
+
+
+module gf2m_reduce   #(    parameter  M =6, parameter  T=4) (
+    input  wire [2*M-2:0] d,          
+    input  wire [M*(M-1)-1:0] Rflat,  
+    output reg  [M-1:0] c             
+);
+
+    integer i, j;
+    reg [M-1:0] r [0:M-2];  
+    reg [M-1:0] temp;       // intermediate XOR sum for each c_j
+
+    always @* begin
+        
+        for (i = 0; i <= M-2; i = i + 1)
+            for (j = 0; j < M; j = j + 1)
+                r[i][j] = Rflat[i*M + j];
+
+        // initialize c with lower m bits of d
+        for (j = 0; j < M; j = j + 1)
+            c[j] = d[j];
+
+        // perform modular reduction: add higher terms (GF(2) XOR)
+        for (i = 0; i <= M-2; i = i + 1) begin
+            for (j = 0; j < M; j = j + 1) begin
+                if (r[i][j])
+                    c[j] = c[j] ^ d[M + i];  // XOR if r_j^i == 1
+            end
+        end
+    end
+
+endmodule
+
+
